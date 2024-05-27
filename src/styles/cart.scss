@@ -1,0 +1,105 @@
+@import "colors";
+
+
+
+
+.cart{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+
+    >main{
+        padding: 2rem;
+        overflow-y: auto;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        .cartDetails{
+            background-color: $tertiary;
+            width: 100%;
+            border-radius: 10px;
+            margin: 2rem 0;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr 1fr;
+            align-items: center;
+        
+        
+            img{
+                width: 100%;
+                height: 200px;
+                object-fit: contain;
+            }
+        
+            article{
+                margin-left: 30px;
+                color:black;
+        
+            }
+             > div{
+                display: flex;
+                align-items: center;
+                height: 100%;
+                gap:40px;
+        
+        
+                button{
+                    width: 30px;
+                    height: 30px;
+                    border: none;
+                    background-color: $primary;
+                    color: $tertiary;
+                    border-radius: 5px;
+                    cursor: pointer;
+        
+                    &:hover{
+                        background-color: $primarydark;
+                    }
+                }
+             
+        
+            p{
+                color:black;
+            }
+        }
+        
+        .delete{
+        color: black;
+        font-size: 1.5rem;
+        margin: 0 1rem;
+        transition: all 0.3s;
+        &:hover{
+            color: $secondary;
+            
+        }
+        }
+       
+        }
+
+
+    }
+
+    > aside{
+        border-radius: 100px 0 0 100px;
+        background-color: $primary;
+        color: $tertiary;
+        height: 100%;
+        width: 100%;
+        box-shadow: -10px 0px 10px rgba(0,0,0,182);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap:8px;
+
+    } >h2{
+        margin: 1rem;
+        font: 1.8rem "Roboto";
+        letter-spacing: 2px;
+
+        &:last-of-type{
+            font-weight: 600;
+        }
+    }
+}
+
